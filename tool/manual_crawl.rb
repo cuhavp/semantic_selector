@@ -56,12 +56,12 @@ lambda {
         put_w "[WARN] this page has already been visited? continue?"
       end
 
-      Highlight.load_highliter()
+      # Highlight.load_highliter()
     end
 
-    define_method :load_highliter do
-      Highlight.load_highliter()
-    end
+    # define_method :load_highliter do
+    #   Highlight.load_highliter()
+    # end
 
     # Interactive Shell based on inference
     define_method :collect do |start_index=0|
@@ -78,7 +78,7 @@ lambda {
         name = tag.attribute('name')
         html = tag.attribute('outerHTML')
         infered_topic = $api_client.inference_html(html)
-        Highlight.highlight_by_name(name)
+        # Highlight.highlight_by_name(name)
 
         put_n "#{index}/#{tags.length}"
         put_n "HTML"
@@ -120,14 +120,14 @@ lambda {
         end
 
         if infered_topic == "skip"
-          Highlight.erase_by_name(name)
+          # Highlight.erase_by_name(name)
           put_n "...skiped"
           put_n ""
           next
         end
 
         put_n "new_topic: #{infered_topic}".blue
-        Highlight.erase_by_name(name)
+        # Highlight.erase_by_name(name)
         DBUtil.save($driver, tag, infered_topic)
         put_n "...saved"
         put_n ""
@@ -149,7 +149,7 @@ lambda {
 }.call
 
 DBUtil.db_setup()
-$driver = Selenium::WebDriver.for :chrome
+$driver = Selenium::WebDriver.for :firefox
 $api_client = ApiClient.new()
 
 while cmd = Readline.readline('> ', true).strip

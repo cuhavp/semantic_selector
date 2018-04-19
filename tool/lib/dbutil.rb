@@ -10,7 +10,7 @@ module DBUtil
     ActiveRecord::Base.establish_connection(
       adapter: 'mysql2',
       host: 'localhost',
-      username: 'root', password: '',
+      username: 'root', password: '1',
       database: 'register_form',
     )
   end

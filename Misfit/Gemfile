@@ -1,0 +1,7 @@
+gem "capybara"
+gem 'nokogiri'
+gem "selenium-webdriver"
+gem "rspec"
+gem 'faraday'
+gem 'colorize'
+gem 'allure-rspec'

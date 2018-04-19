@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ns2:test-suite xmlns="" xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1520582819553" stop="1520583211482">
+  <name>Order a Command watch</name>
+  <title>Order a Command watch</title>
+  <test-cases>
+    <test-case start="1520582819554" stop="1520583211482" status="passed">
+      <name>Order a Command watch As Registered user</name>
+      <title>Order a Command watch As Registered user</title>
+      <steps/>
+      <attachments/>
+      <labels>
+        <label name="thread" value="70232035288360"/>
+        <label name="host" value="LVNHCMAC0000140"/>
+        <label name="story" value="Order a watch"/>
+        <label name="severity" value="critical"/>
+        <label name="testId" value="99"/>
+      </labels>
+      <parameters/>
+    </test-case>
+  </test-cases>
+  <labels>
+    <label name="thread" value="70232035288360"/>
+    <label name="host" value="LVNHCMAC0000140"/>
+  </labels>
+</ns2:test-suite>

@@ -8,11 +8,11 @@ password_confirmation,password
 birthday_year,birthDate
 birthday_month,birthDate
 birthday_day,birthDate
-family_name,userName
-first_name,userName
-family_name_furigana,userName
+family_name,lastName
+first_name,firstName
+family_name_furigana,lastName
 pc_email_confirmation,email
-first_name_furigana,userName
+first_name_furigana,firstName
 address_town,address
 prefecture,addressPrefecture
 entry_path,unknown
@@ -73,8 +73,8 @@ purchase_shop,unknown
 day,unknown
 address,address
 employee_number,unknown
-family_name_roma,unknown
-first_name_roma,unknown
+family_name_roma,lastName
+first_name_roma,firstName
 pin_code,unknown
 town,unknown
 fax_number_first,unknown

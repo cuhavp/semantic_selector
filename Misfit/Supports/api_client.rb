@@ -7,7 +7,7 @@ class ApiClient
   end
 
   def inference_html(html)
-    puts( 'check element' +html)
+    puts( '[ML] Check element : ' +html)
     response = @conn.post do |req|
       req.url '/api/inference'
       req.headers['Content-Type'] = 'application/json'
@@ -17,7 +17,7 @@ class ApiClient
     if response.success?
       body = JSON.parse(response.body, {:symbolize_names => true})
       result = body[:topic]
-      puts result
+      puts('[ML] Detect topic : '+result) 
     end
     return result
   end

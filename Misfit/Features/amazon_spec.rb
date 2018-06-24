@@ -11,20 +11,18 @@ feature 'Amazon' do
   end
 
   scenario 'Search product' do
-    data_client = DataClient.new()
-    data = data_client.pick_data_randomly()
-    fill_in 'field-keywords', :with => 'ferrari 584'
+    fill_in 'field-keywords', :with => 'ferrari toy car'
     find('#nav-search > form > div.nav-right > div > input').click
-    page.has_text?("results for \"ferrari 584\"")
+    page.has_text?("results for \"ferrari toy car\"")
     find(:css, '#result_0 a.s-access-detail-page').click
     page.has_text?('Back to search results')
     find(:id, 'add-to-cart-button').click
-    # find('#warrantyModalBtnAtc > span > input').click
     if page.has_css?('#warrantyModalBtnAtc > span > input')
       find('#warrantyModalBtnAtc > span > input').click
     end
     page.has_text?('Added to Cart')
     find(:id, 'hlb-ptc-btn-native').click
+    find(:id, 'siNoCoverage-announce').click
 
     # fill_in 'email', :with => data[:email]
     # fill_in 'password', :with => data[:password]

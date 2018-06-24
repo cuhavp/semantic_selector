@@ -17,10 +17,13 @@ require '../Libraries/form_helper'
 include RSpec::Matchers
 Capybara.configure do |config|
   config.run_server = false
-  config.default_driver = :selenium
-  config.app_host = 'https://www.skagen.com' # change url
+  config.default_driver = :chrome
+  config.app_host = 'https://misfit.com' # change url
 end
 
+Capybara.register_driver :chrome do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+end
 RSpec.configure do |config|
   config.include Capybara::DSL
   # config.include User_Data

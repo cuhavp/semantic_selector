@@ -35,7 +35,7 @@ class InputTable(object):
     def __init__(self, exclude_threshold, connect_info=None):
         if connect_info is None:
             self.connect_info = \
-                'mysql+mysqlconnector://root:1@localhost/register_form'
+                'mysql+mysqlconnector://root@localhost/register_form'
         else:
             self.connect_info = connect_info
         self.exclude_threshold = exclude_threshold
